@@ -1,0 +1,24 @@
+apply plugin: 'java'
+apply plugin: 'maven'
+apply plugin: 'war'
+
+group = 'com.mySampleApplication'
+version = '1.0-SNAPSHOT'
+
+description = """Maven Archetype for GWT"""
+
+sourceCompatibility = 1.5
+targetCompatibility = 1.5
+
+
+
+repositories {
+        
+     maven { url "http://repo.maven.apache.org/maven2" }
+}
+dependencies {
+    runtime group: 'com.google.gwt', name: 'gwt-servlet', version:'2.8.0'
+    testCompile group: 'junit', name: 'junit', version:'4.11'
+    providedCompile group: 'com.google.gwt', name: 'gwt-user', version:'2.8.0'
+    providedCompile group: 'com.google.gwt', name: 'gwt-dev', version:'2.8.0'
+}
